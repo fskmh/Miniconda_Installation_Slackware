@@ -1,3 +1,4 @@
+0. Note that the first two steps are only required if you previously installed Anaconda or Miniconda and just "yolo'd it".
 1. cd && rm -rf miniconda3
 2. Remove everything between (and including)
 # >>> conda initialize >>> and # <<< conda initialize <<<
@@ -12,7 +13,7 @@ in .bashrc in your home directory.
 alias miniconda_init='eval "$(${HOME}/miniconda3/bin/conda shell.bash hook)"'
 10. Source your .bashrc or close the terminal and open a new one.
 11. Type "alias" to see a list of aliases or just type "miniconda_init".
-12. To install Python 3.8 in a Conda environment with the name py38 type the following:
+12. To install, for example, Python 3.8 in a Conda environment with the name py38 type the following:
 conda create --name py38 python=3.8 anaconda
 13. You should be able to switch to this environment using the command "activate py38" at the conda prompt.
 14. The conda prompt should change from "(base)" to "(py38)". If you type "python" now you should be at the Python 3.8 prompt.
