@@ -15,5 +15,8 @@ alias miniconda_init='eval "$(${HOME}/miniconda3/bin/conda shell.bash hook)"'
 11. Type "alias" to see a list of aliases or just type "miniconda_init".
 12. To install, for example, Python 3.9 in a Conda environment with the name py39 type the following:
 conda create --name py39 python=3.9 anaconda
-13. You should be able to switch to this environment using the command "activate py39" at the conda prompt.
-14. The conda prompt should change from "(base)" to "(py39)". If you type "python" now you should be at the Python 3.9 prompt.
+13. To see what Conda environments are installed, use the command "conda env list".
+14. You should be able to switch to this environment using the command "activate py39" at the conda prompt.
+15. The conda prompt should change from "(base)" to "(py39)".
+16. If the conda prompt does not change from "(base)" to "(py39)" then try using "conda activate py39" instead of just "activate py39".
+17. If you type "python" now, you should see the Anaconda, Inc. Python 3.9 prompt instead of the system Python prompt.
