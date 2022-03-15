@@ -9,7 +9,7 @@ in .bashrc in your home directory.
 6. Confirm installation location (default is fine).
 7. Miniconda unpacks
 8. Do not initialise Miniconda (just press enter at the prompt, default is no).
-9. Copy and paste the following on its own line in your .bashrc and .profile file.
+9. Copy and paste the following on its own line in your home .bashrc file.
 alias miniconda_init='eval "$(${HOME}/miniconda3/bin/conda shell.bash hook)"'
 10. Source your .bashrc or close the terminal and open a new one.
 11. Type "alias" to see a list of aliases or just type "miniconda_init".
