@@ -1,6 +1,6 @@
-0. Note that the first two steps are only required if you previously installed Anaconda or Miniconda and just "yolo'd it".
+0. Note that the first two steps are only required if you previously installed Anaconda or Miniconda.
 1. cd && rm -rf miniconda3
-2. Remove everything between (and including)
+2. If a previous installation modified your .bashrc then remove everything between (and including)
 # >>> conda initialize >>> and # <<< conda initialize <<<
 in .bashrc in your home directory.
 3. wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
