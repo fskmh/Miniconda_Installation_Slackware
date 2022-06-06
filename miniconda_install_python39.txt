@@ -24,4 +24,5 @@ conda list numpy
 conda activate py39
 18. N.B. The conda prompt should change from "(base)" to "(py39)", otherwise something went wrong and you need to retrace your steps.
 19. If you type "python3" now, you should see the Anaconda, Inc. Python 3.9 prompt instead of the system Python prompt.
-20. Using this recipe you can have multiple Python environments running in different terminals without them interfering with each other, or the OS Python packages, which you can use still use by not initialising Anaconda/Miniconda.
+20. Using this recipe you can have multiple Python environments running in different terminals without them interfering with each other.
+21. You can also still use Python packages provided by your distro simply by not initialising Anaconda/Miniconda.
