@@ -1,28 +1,35 @@
-0. Note that the first two steps are only required if you previously installed Anaconda or Miniconda.
-1. cd && rm -rf miniconda3
-2. If a previous installation modified your .bashrc remove everything between (and including) these lines:
+- Note that the first two steps are only required if you previously installed Anaconda or Miniconda.
+cd && rm -rf miniconda3
+- If a previous installation modified your .bashrc remove everything between (and including) these lines:
 # >>> conda initialize >>> and # <<< conda initialize <<<
-3. wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-4. sh Miniconda3-latest-Linux-x86_64.sh
-5. Agree to licence
-6. Confirm installation location (default is fine).
-7. Miniconda unpacks
-8. Do not initialise Miniconda (this is currently the default, so just press enter at the prompt).
-9. Copy and paste the following on its own line in your home .bashrc file.
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+sh Miniconda3-latest-Linux-x86_64.sh
+- Agree to licence
+- Confirm installation location (default is fine).
+- Miniconda unpacks
+- Do not initialise Miniconda (this is currently the default, so just press enter at the prompt).
+- Copy and paste the following lines in your home .bashrc file:
 alias miniconda_init='eval "$(${HOME}/miniconda3/bin/conda shell.bash hook)"'
-10. Source your .bashrc ("source .bashrc") or close the terminal and open a new one.
-11. Type "alias" to see a list of aliases or just type "miniconda_init".
-12. Just press tab after the first 4 or so letters, you don't have to painstakingly type the whole thing.
-13. To install Python 3.9 in a Conda environment with the name py39 type the following:
+alias py39_init='eval "$(${HOME}/miniconda3/bin/conda shell.bash hook)" && conda activate py39'
+- If you are an Ubuntu or Debian user you should rather paste these lines into the .bash_alias file.
+- Source your .bashrc ("source .bashrc") or close the terminal and open a new one.
+- Type "alias" to see a list of aliases or just type "miniconda_init".
+- Just press tab after the first 4 or so letters, you don't have to painstakingly type the whole thing.
+- To install Python 3.9 in a Conda environment with the name py39 type the following:
 conda create --name py39 python=3.9 anaconda
-14. You can use the same command to install an environment for a different version of Python.
-15. To see what Conda environments are installed, use this command:
+- You can use the same command to install an environment for a different version of Python.
+- To see what Conda environments are installed, use this command:
 conda env list
-16. To see if a library is installed in the environment, e.g. numpy, use this command:
+- To see if a library is installed in the environment, e.g. numpy, use this command:
 conda list numpy
-17. You should now be able to switch to this environment using this command:
+- You should now be able to switch to this environment using this command:
 conda activate py39
-18. N.B. The conda prompt should change from "(base)" to "(py39)", otherwise something went wrong and you need to retrace your steps.
-19. If you type "python3" now, you should see the Anaconda, Inc. Python 3.9 prompt instead of the system Python prompt.
-20. Using this recipe you can have multiple Python environments running in different terminals without them interfering with each other.
-21. You can also still use Python packages provided by your distro simply by not initialising Anaconda/Miniconda.
+- You could also just use the "py39_init" alias to initialise Conda and activate this newly created environment in one shot.
+- N.B. The conda prompt should change from "(base)" to "(py39)", otherwise something went wrong and you need to retrace your steps.
+- If you type "python3" now, you should see the Anaconda, Inc. Python 3.9 prompt instead of the system Python prompt.
+- Using this recipe you can have multiple Python environments running in different terminals without them interfering with each other.
+- You can also still use Python packages provided by your distro simply by not initialising Anaconda/Miniconda.
+- Note that if something goes wrong you can remove the environment from the Conda base env like this:
+conda remove --name py39 --all
+- Also note that if you have to pip install a package in the created environment you should first use this command to avoid some common installation errors:
+pip install -U pip setuptools
