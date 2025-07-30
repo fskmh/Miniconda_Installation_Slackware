@@ -16,7 +16,9 @@ alias py39_init='eval "$(${HOME}/miniconda3/bin/conda shell.bash hook)" && conda
 - Type "alias" to see a list of aliases or just type "miniconda_init".
 - Just press tab after the first 4 or so letters, you don't have to painstakingly type the whole thing.
 - To install Python 3.9 in a Conda environment with the name py39 type the following:
-conda create --name py39 python=3.9 anaconda
+conda create -n py39 python=3.9 anaconda
+- Note that you can also install a minimal environment without specifying the anaconda repo like this:
+conda create -n py39 python=3.9
 - You can use the same command to install an environment for a different version of Python.
 - To see what Conda environments are installed, use this command:
 conda env list
@@ -30,6 +32,6 @@ conda activate py39
 - Using this recipe you can have multiple Python environments running in different terminals without them interfering with each other.
 - You can also still use Python packages provided by your distro simply by not initialising Anaconda/Miniconda.
 - Note that if something goes wrong you can remove the environment from the Conda base env like this:
-conda remove --name py39 --all
+conda remove -n py39 --all
 - Also note that if you have to pip install a package in the created environment you should first use this command to avoid some common installation errors:
 pip install -U pip setuptools
