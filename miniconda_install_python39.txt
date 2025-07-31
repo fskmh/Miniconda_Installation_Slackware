@@ -1,8 +1,11 @@
 - Note that the first two steps are only required if you previously installed Anaconda or Miniconda.
 cd && rm -rf miniconda3
-- If a previous installation modified your .bashrc remove everything between (and including) these lines:
+- If you previously installed Anaconda, make sure you remove the automatic initialisation in your .bashrc first.
+- Hint: Remove everything between (and including) these lines:
 # >>> conda initialize >>> and # <<< conda initialize <<<
+- Now enter the following three commands at the terminal prompt:
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod a+x Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh
 - Agree to licence
 - Confirm installation location (default is fine).
